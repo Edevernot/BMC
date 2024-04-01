@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Exercise Science Program</title>
+<link rel="stylesheet" href="../css/body.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Account Settings</h2>
+    <form action="/updateSettings" method="post">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="newpassword" placeholder="New Password">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <!-- Additional settings fields can go here -->
+        <button type="submit" href="main.html">Update Settings</button>
+    </form>
+    <p><a href="main.html" class="link">Back to Dashboard</a></p>
+</div>
+
+</body>
+</html>

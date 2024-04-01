@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Center</title>
+<link rel="stylesheet" href="../css/person.css">
+<style>
+  /* 居中按钮 */
+  .center {
+    text-align: center;
+  }
+  
+  /* 美化按钮 */
+  .btn {
+    background-color: #3498db; /* 蓝色背景 */
+    border: none;
+    color: white; /* 白色字体 */
+    padding: 15px 32px; /* 内边距 */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px; /* 圆角 */
+  }
+
+  /* 鼠标悬停效果 */
+  .btn:hover {
+    background-color: #2980b9; /* 较深的蓝色 */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Personal Center</h1>
+  <div class="profile">
+    <div class="segment">
+      <img src="../res/profile.jpg" alt="Upload Profile Picture">
+    </div>
+    <div class="segment">
+      <p><strong>Nickname:</strong> JohnDoe</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+      <p><strong>Contact Number:</strong> 123-456-7890</p>
+    </div>
+    <div class="segment">
+      <p><strong>Preferences:</strong></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, turpis eu vestibulum aliquet, sapien dolor fermentum lectus, vel efficitur elit velit in quam.</p>
+    </div>
+  </div>
+  <!-- 使用.center类和.btn类美化并居中按钮 -->
+  <div class="center">
+    <button class="btn" onclick="goToMainPage()">Back to Main Page</button> <!-- 返回按钮 -->
+  </div>
+</div>
+
+<script>
+  // 返回按钮点击事件，跳转到 main.html 页面
+  function goToMainPage() {
+    window.location.href = 'main.html';
+  }
+</script>
+
+</body>
+</html>

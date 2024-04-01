@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        /* 新增样式 */
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Main Page</h1>
+        <div class="options">
+            <a href="gameselect.html" class="option">Game Selection</a>
+            <a href="personal_center.html" class="option">Personal Center</a>
+            <a href="accountsetting.html" class="option">Account Settings</a>
+        </div>
+    </div>
+    <a href="../public/login.html" class="logout-btn">Logout</a>
+</body>
+</html>

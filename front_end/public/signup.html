@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up - Exercise Science Program</title>
+<link rel="stylesheet" href="../css/body.css">
+<style>
+/* 新增样式 */
+.return-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.return-link:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Wellcome to the Create Account Page</h2>
+    <form id="signupForm">
+        <input type="text" id="account" name="account" placeholder="Account" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+        <input type="number" id="height" name="height" placeholder="Height (cm)" required>
+        <input type="number" id="weight" name="weight" placeholder="Weight (kg)" required>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <button type="submit">Create Account</button>
+        <a href="login.html" class="return-link">Return to Login</a>
+    </form>
+</div>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var account = document.getElementById('account').value;
+    var password = document.getElementById('password').value;
+    var age = document.getElementById('age').value;
+    var height = document.getElementById('height').value;
+    var weight = document.getElementById('weight').value;
+    var phone = document.getElementById('phone').value;
+
+    fetch('/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ account: account, password: password, age: age, height: height, weight: weight, phone: phone })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // 创建成功，重定向到登录
+            window.location.href = 'login.html';
+        } else {
+            // 显示错误消息
+            document.getElementById('message').textContent = data.message;
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+
+</body>
+</html>
